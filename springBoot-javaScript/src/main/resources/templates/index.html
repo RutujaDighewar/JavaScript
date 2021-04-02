@@ -1,0 +1,14 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<script type="text/javascript">
+    function deleteEmployee(id){
+	document.location.href="delete?id=" + id;
+}
+</script>
+</head>
+<body>
+   <div th:text="${id}"></div>
+   <input type="hidden" id="myId" th:text="${id}">
+   <a href="#" th:onclick=" 'javascript:deleteEmployee(\'' + ${id} + '\')' ">Delete</a>
+</body>
+</html>
